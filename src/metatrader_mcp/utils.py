@@ -6,7 +6,7 @@ def init(
 	password: Optional[str],
 	server: Optional[str],
 	path: Optional[str] = None,
-	portable: Optional[bool] = None
+	portable: Optional[str] = None
 ) -> Optional[client.MT5Client]:
 	"""
 	Initialize MT5Client
@@ -28,7 +28,7 @@ def init(
 			"server": server
 		}
 
-		if portable:
+		if portable == "True":
 			config["portable"] = portable
 
 		# Add path to config if provided
