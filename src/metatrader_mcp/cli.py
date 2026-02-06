@@ -16,9 +16,13 @@ def main(login, password, server, path, portable):
     os.environ["login"] = str(login)
     os.environ["password"] = password
     os.environ["server"] = server
-    os.environ["portable"] = portable
+
     if path:
         os.environ["path"] = path
+    if portable:
+        os.environ["portable"] = portable
+
+    
     # run STDIO transport
     mcp.run(transport="stdio")
 
