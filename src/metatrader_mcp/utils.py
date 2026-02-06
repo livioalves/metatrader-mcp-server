@@ -6,7 +6,7 @@ def init(
 	password: Optional[str],
 	server: Optional[str],
 	path: Optional[str] = None,
-	portable: Optional[bool] = False,
+	portable: Optional[bool] = False
 ) -> Optional[client.MT5Client]:
 	"""
 	Initialize MT5Client
